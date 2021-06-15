@@ -5,7 +5,6 @@ import { Card, Icon, Label, Image, Button, Grid, Form } from "semantic-ui-react"
 import moment from 'moment'
 import LikeButton from '../components/LikeButton';
 import { AuthContext } from '../context/auth';
-import { Link } from 'react-router-dom';
 import DeleteButton from '../components/DeleteButton';
 
 export default function SinglePost(props) {
@@ -33,7 +32,7 @@ export default function SinglePost(props) {
     if (!data || !data.getPost) {
         postMarkUp = <p>Loading here...</p>
     } else {
-        const { id, body, createdAt, username, comments, likes, likeCount, commentCount } = data.getPost;
+        const { id, body, createdAt, username, comments, commentCount } = data.getPost;
         postMarkUp = (
             <Grid>
                 <Grid.Row>

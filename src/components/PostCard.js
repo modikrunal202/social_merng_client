@@ -7,12 +7,6 @@ import LikeButton from './LikeButton'
 import DeleteButton from './DeleteButton';
 export default function PostCard({ post }) {
     const { user } = useContext(AuthContext)
-    function likePost() {
-        console.log('Like Post');
-    }
-    function commentOnPost() {
-        console.log('Comment Post');
-    }
     const { body, createdAt, username, likeCount, commentCount, id, likes } = post
     return (
         <Card fluid>
